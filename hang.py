@@ -13,8 +13,7 @@ def display_clue(word, guessed_letters):
 
 while True:
     print(display_clue(word, guessed_letters))
-    gu
-    ess = input("Guess your letter: ").upper()  
+    guess = input("Guess your letter: ").upper()  
     if guess in guessed_letters:
         print("You've already guessed that letter!")
         continue
