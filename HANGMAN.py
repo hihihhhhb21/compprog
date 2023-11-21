@@ -20,12 +20,12 @@ def display_clue(word, guessed_letters):
 v = 0
 z = "|‾‾‾˥","|   (", "|   )", "|    ", "|      ", "|     ","L_______"
 x = "|‾‾‾˥","|   (", "|   )", "|   O", "|      ", "|     ","L_______"
+r = "|‾‾‾˥","|   (", "|   )", "|   O", "|   |  ", "|     ","L_______"
 c = "|‾‾‾˥","|   (", "|   )", "|   O", "|  /| ", "|     ","L_______"
 b = "|‾‾‾˥","|   (", "|   )", "|   O", "|  /|\ ", "|     ","L_______"
 p = "|‾‾‾˥","|   (", "|   )", "|   O", "|  /|\ ", "|    \ ","L_______"
 o = "|‾‾‾˥","|   (", "|   )", "|   O", "|  /|\ ", "|  / \ ","L_______"
-#‾   ˥   ,"‾‾‾˥","   )", "   (", "   )", "   O", "  (|)", "   /\ ","     "
-while True:
+while v <= 5:
     print(display_clue(word, guessed_letters))
     guess = input("Guess your letter: ").upper() 
     if guess in guessed_letters:
@@ -33,11 +33,14 @@ while True:
         continue
     if guess not in word:
        v = v + 1
-       if v == 1:
+       if v == 0:
            for i in z:
                print(i) 
-    if v == 2:
+    if v == 1:
            for i in x:
+               print(i) 
+    if v == 2:
+           for i in r:
                print(i) 
     if v == 3:
            for i in c:
@@ -47,20 +50,22 @@ while True:
                print(i) 
     if v == 5:
            for i in p:
-               print(i) 
+               print(i)
     if v == 6:
            for i in o:
-               print(i) 
+               print(i)
     if v >= 6:
-       break
+         w = input("reastart?(y or n) ")
+         if w == 'y':
+            v = 0
+         elif w == 'n':
+              break
     print(f"you have tried {v} times out of 6 ")
     guessed_letters.append(guess)
     if all(letter.lower() in guessed_letters or letter.upper() in guessed_letters for letter in word):
         print(f"Congratulations! You guessed the word: {word}")
-        break
-z ="    )", "    (", "    )"
-x = 1
-c = 1
-b = 1
-p = 1
-o = 1
+        w = input("reastart?(y or n) ")
+        if w == 'y':
+            v = 0
+        elif w == 'n':
+            break
