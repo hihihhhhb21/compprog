@@ -75,4 +75,3 @@ while True:
             v = 0
         elif w == 'n':
             break
-        
