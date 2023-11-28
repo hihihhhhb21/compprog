@@ -25,7 +25,7 @@ c = "|‾‾‾˥","|   (", "|   )", "|   O", "|  /| ", "|     ","L_______"
 b = "|‾‾‾˥","|   (", "|   )", "|   O", "|  /|\ ", "|     ","L_______"
 p = "|‾‾‾˥","|   (", "|   )", "|   O", "|  /|\ ", "|    \ ","L_______"
 o = "|‾‾‾˥","|   (", "|   )", "|   O", "|  /|\ ", "|  / \ ","L_______"
-while v <= 5:
+while True:
     print(display_clue(word, guessed_letters))
     guess = input("Guess your letter: ").upper() 
     if guess in guessed_letters:
@@ -60,7 +60,7 @@ while v <= 5:
             v = 0
          elif w == 'n':
               break
-    print(f"you have tried {v} times out of 6 ")
+    print(f"you have failed {v} times out of 6 ")
     guessed_letters.append(guess)
     if all(letter.lower() in guessed_letters or letter.upper() in guessed_letters for letter in word):
         print(f"Congratulations! You guessed the word: {word}")
