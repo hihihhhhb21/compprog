@@ -8,7 +8,7 @@ def get_random_word():
 print("Welcome to Hangman!")
 word = get_random_word()
 guessed_letters = [] 
-
+print(word)
 def display_clue(word, guessed_letters):
     clue = ""
     for letter in word:
@@ -55,6 +55,8 @@ while True:
            for i in o:
                print(i)
     if v >= 6:
+         word = get_random_word()
+         guessed_letters = [] 
          w = input("reastart?(y or n) ")
          if w == 'y':
             v = 0
@@ -64,8 +66,11 @@ while True:
     guessed_letters.append(guess)
     if all(letter.lower() in guessed_letters or letter.upper() in guessed_letters for letter in word):
         print(f"Congratulations! You guessed the word: {word}")
+        word = get_random_word()
+        guessed_letters = [] 
         w = input("reastart?(y or n) ")
         if w == 'y':
             v = 0
         elif w == 'n':
             break
+        
