@@ -74,4 +74,8 @@ while True:
         if w == 'y':
             v = 0
         elif w == 'n':
+<<<<<<< HEAD
             break
+=======
+            break
+>>>>>>> ada2b4aa0dc4a87fe9e46a4c91d2136af3ffd061
