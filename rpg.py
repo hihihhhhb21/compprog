@@ -19,14 +19,38 @@ y = ""
 u = ""
 i = ""
 o = ""
-
+beaster = 0
+beast = 0
+armor = beaster + 1
+damage = beast + 1
 hel = 100
 while hel > 0:
     worp = input("what do you want to do? (w to walk, p for inventory) ")
     inv = (f"name: {name} health: {hel} cash: {cash} other items: {q} {w} {e} {r} {t} {y} {u} {i} {o}")
     random_num = random.choice(test_list)
     num = random_num
-    
+    if q == "frog legs":
+        beaster = 0.25
+    if w == "fly sword":
+        beast = 0.10
+    if e == "frog tounge":
+        beaster = 0.3
+    if q == "frog legs" and e == "frog tounge":
+        beaster == 1
+    if q == "frog legs" and w == "fly sword" and e == "frog tounge":
+        beaster = 1.25
+        beast = 0.25
+    if r == "knife":
+        beast = 0.25
+    if t == "sword":
+        beast = 0.10
+    if y == "armor":
+        beaster = 0.3
+    if r == "knife" and t == "sword":
+        beast = 0.35
+    if r == "knife" and t == "sword" and y == "armor":
+        beaster = 0.5
+        beast = 0.85
     terst = (1,2,3)
     lel = random.choice(terst)
     if worp == "p":
