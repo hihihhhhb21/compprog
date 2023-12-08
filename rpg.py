@@ -1,12 +1,12 @@
 import random
-dub = random.randint(1,80)
+dub = random.randint(1,60)
 
 terst = (1,2,3)
 test_list = [1, 2]
 random_num = random.choice(test_list)
 num = random_num
-print("Welcome tto the wonderful world of zezuz! This is a word of mystery and adventure, i wonder how youl travel these lands")
-name = input("what is your name brave traveler")
+print("Welcome to the wonderful world of zezuz! This is a word of mystery and adventure, i wonder how you'll travel these winding lands ")
+name = input("what is your name brave traveler ")
 cash = 20
 v = 0
 c = v 
@@ -49,8 +49,19 @@ while hel > 0:
     if r == "knife" and t == "sword":
         beast = 0.35
     if r == "knife" and t == "sword" and y == "armor":
-        beaster = 0.5
-        beast = 0.85
+        beaster = 0.75
+        beast = 1
+    if r == "potion":
+        beaster = 0.25
+    if t == "witches hat":
+        beast = 0.10
+    if y == "wand":
+        beaster = 0.15
+    if r == "potion" and t == "witches hat":
+        beast = 0.45
+    if r == "potion" and t == "witches hat" and y == "wand":
+        beaster = 1.5
+        beast = 0.5
     terst = (1,2,3)
     lel = random.choice(terst)
     if worp == "p":
@@ -63,18 +74,18 @@ while hel > 0:
                  hal = dub / 0.75
                  print("you ran into a feral frogll!")
                  while heli > 0 and hel > 0:
-                    dam = input("do you want to run (r) or fight (f)")
+                    dam = input("do you want to run (r) or fight (f) ")
                     if dam == "r":
                         nem = random.choice(test_list)
                         if nem == 3:
                             print("you ran away!")
                         while heli > 0 and hel > 0 :
-                           dub = random.randint(1,80)
+                           dub = random.randint(1,60)
                            hal = dub / 0.75 
-                           hel = hel - dub
+                           hel = hel - (dub / armor)
                            print(hel)
-                           dub = random.randint(1,80)
-                           heli = heli - dub
+                           dub = random.randint(1,60)
+                           heli = heli - (dub * damage)
                            print(heli)
                            if heli <= 0:
                                print("you won!")
@@ -95,12 +106,12 @@ while hel > 0:
                                break
                     if dam == "f":
                         while heli > 0 and hel > 0:
-                           dub = random.randint(1,80)
-                           heli = heli - dub
+                           dub = random.randint(1,60)
+                           heli = heli - (dub * damage)
                            print(heli)
-                           dub = random.randint(1,80)
+                           dub = random.randint(1,60)
                            hal = dub / 0.75 
-                           hel = hel - dub
+                           hel = hel - (dub / armor)
                            print(hel)
                            if heli <= 0:
                                print("you won!")
@@ -114,7 +125,7 @@ while hel > 0:
                                        w = "fly sword"
                                    if lool == 3:
                                        e = "frog tounge" 
-                               heli = heli + 25
+                               hel = hel + 25
                                cash = cash + dub
                            if hel <= 0:
                                print ("you lost!")
@@ -122,7 +133,7 @@ while hel > 0:
                  heli = 100
                  print("you ran into a solder!")
                  while heli > 0 and hel > 0:
-                    dam = input("do you want to run (r) or fight (f)")
+                    dam = input("do you want to run (r) or fight (f) ")
                     if dam == "r":
                         nem = random.choice(test_list)
                         if nem == 3:
@@ -130,10 +141,10 @@ while hel > 0:
                         while heli > 0 and hel > 0:
                            dub = random.randint(1,80)
                            hal = dub / 0.75 
-                           hel = hel - dub
+                           hel = hel - (dub / armor)
                            print(hel)
                            dub = random.randint(1,80)
-                           heli = heli - dub
+                           heli = heli - (dub * damage)
                            print(heli)
                            if heli <= 0:
                                print("you won!")
@@ -146,7 +157,8 @@ while hel > 0:
                                    if lool == 2:
                                        t = "sword"
                                    if lool == 3:
-                                       y = "armor" 
+                                       y = "armor"
+                                   hel = hel + 25 
                                cash = cash + dub
                                break
                            if hel <= 0:
@@ -154,12 +166,12 @@ while hel > 0:
                                break
                     if dam == "f":
                         while heli > 0 and hel > 0:
-                           dub = random.randint(1,80)
-                           heli = heli - dub
+                           dub = random.randint(1,60)
+                           heli = heli - (dub * damage)
                            print(heli)
-                           dub = random.randint(1,80)
+                           dub = random.randint(1,60)
                            hal = dub / 0.75 
-                           hel = hel - dub
+                           hel = hel - (dub / armor)
                            print(hel)
                            if heli <= 0:
                                print("you won!")
@@ -169,11 +181,14 @@ while hel > 0:
                                    lool = random.randint(1,3)
                                    if lool == 1:
                                        r = "knife"
+                                       print(f"you got a {r}")
                                    if lool == 2:
                                        t = "sword"
+                                       print(f"you got a {t}")
                                    if lool == 3:
                                        y = "armor" 
-                               heli = heli + 25
+                                       print(f"you got {y}")
+                               hel = hel + 25
                                cash = cash + dub
                                break
                            if hel <= 0:
@@ -184,7 +199,7 @@ while hel > 0:
                 hal = dub * 1.25
                 print("you ran into a witch!")
                 while heli > 0 and hel > 0:
-                    dam = input("do you want to run (r) or fight (f)")
+                    dam = input("do you want to run (r) or fight (f) ")
                     if dam == "r":
                         nem = random.choice(test_list)
                         if nem == 3:
@@ -192,10 +207,10 @@ while hel > 0:
                         while heli > 0 and hel > 0:
                            dub = random.randint(1,80)
                            hal = dub / 0.75 
-                           hel = hel - dub
+                           hel = hel - (dub / armor)
                            print(hel)
                            dub = random.randint(1,80)
-                           heli = heli - dub
+                           heli = heli - (dub * damage)
                            print(heli)
                            if heli <= 0:
                                print("you won!")
@@ -209,6 +224,7 @@ while hel > 0:
                                        i = "witches hat"
                                    if lool == 3:
                                        o = "wand" 
+                                   hel = hel + 25
                                cash = cash + dub
                                break
                            if hel <= 0:
@@ -217,11 +233,11 @@ while hel > 0:
                     if dam == "f":
                         while heli > 0 and hel > 0:
                            dub = random.randint(1,80)
-                           heli = heli - dub
+                           heli = heli - (dub * damage)
                            print(heli)
                            dub = random.randint(1,80)
-                           hal = dub * 1.25 
-                           hel = hel - dub
+                           hali = dub * 1.25 
+                           hel = hel - (dub / armor)
                            print(hel)
                            if heli <= 0:
                                print("you won!")
@@ -235,7 +251,7 @@ while hel > 0:
                                        i = "witches hat"
                                    if lool == 3:
                                        o = "wand" 
-                               heli = heli + 25
+                               hel = hel + 25
                                cash = cash + dub
                                break
                            if hel <= 0:
