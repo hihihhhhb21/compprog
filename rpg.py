@@ -2,7 +2,7 @@ import random
 dub = random.randint(1,60)
 
 terst = (1,2,3)
-test_list = [1, 2]
+test_list = [1,2]
 random_num = random.choice(test_list)
 num = random_num
 print("Welcome to the wonderful world of zezuz! This is a word of mystery and adventure, i wonder how you'll travel these winding lands ")
@@ -77,8 +77,9 @@ while hel > 0:
                     dam = input("do you want to run (r) or fight (f) ")
                     if dam == "r":
                         nem = random.choice(test_list)
-                        if nem == 3:
+                        if nem == 2:
                             print("you ran away!")
+                            break
                         while heli > 0 and hel > 0 :
                            dub = random.randint(1,60)
                            hal = dub / 0.75 
@@ -136,8 +137,9 @@ while hel > 0:
                     dam = input("do you want to run (r) or fight (f) ")
                     if dam == "r":
                         nem = random.choice(test_list)
-                        if nem == 3:
+                        if nem == 2:
                             print("you ran away!")
+                            break
                         while heli > 0 and hel > 0:
                            dub = random.randint(1,80)
                            hal = dub / 0.75 
@@ -202,8 +204,9 @@ while hel > 0:
                     dam = input("do you want to run (r) or fight (f) ")
                     if dam == "r":
                         nem = random.choice(test_list)
-                        if nem == 3:
+                        if nem == 2:
                             print("you ran away!")
+                            break
                         while heli > 0 and hel > 0:
                            dub = random.randint(1,80)
                            hal = dub / 0.75 
